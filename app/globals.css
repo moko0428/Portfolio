@@ -12,6 +12,11 @@
 .BottomMenu {
   display: block;
 }
+.Contents {
+  padding: 30px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
 /* 1024px 초과 시 스타일 */
 @media (min-width: 786px) {
   .LeftMenu {
@@ -22,5 +27,8 @@
   }
   .BottomMenu {
     display: none;
+  }
+  .Contents {
+    padding-left: 350px;
   }
 }
