@@ -2,26 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* 기본 스타일 (1024px 이하) */
+.LeftMenu {
+  display: none;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.Header {
+  left: 0;
+}
+.BottomMenu {
+  display: block;
+}
+/* 1024px 초과 시 스타일 */
+@media (min-width: 786px) {
+  .LeftMenu {
+    display: block;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .Header {
+    left: 300px;
+  }
+  .BottomMenu {
+    display: none;
   }
 }
